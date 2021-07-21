@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+    int n,row,col,spc,val;
+    scanf("%d",&n);
+    for(row=n;row>=1;row--,printf("\n"))  //1
+     {
+         for(spc=n;spc>row;spc--)  
+           printf("%d ",spc);
+         for(col=1;col<=(2*row)-1;col++)
+            printf("%d ",row);
+        for(val=row+1;val<=n;val++) //2    4<=4
+           printf("%d ",val); //2 3 4
+          
+     }
+     for(row=2;row<=n;row++,printf("\n"))
+     {
+         for(spc=n;spc>row;spc--)
+           printf("%d ",spc);
+         for(col=1;col<=(2*row)-1;col++)
+            printf("%d ",row);
+        for(val=row+1;val<=n;val++)
+           printf("%d ",val);
+     }
+}
